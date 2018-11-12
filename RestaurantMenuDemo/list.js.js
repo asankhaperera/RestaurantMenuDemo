@@ -31,6 +31,8 @@ exports.handler = function (event, context, callback) {
         callback(null, response);
     }).catch(function (err) {
         //handle error
+        response.body = JSON.stringify(err);
+        callback(null, response);
     });
 
 }
