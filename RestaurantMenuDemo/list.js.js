@@ -6,10 +6,10 @@ exports.handler = function (event, context, callback) {
     let response = {
         "statusCode": 200,
         "headers": {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "*",
-            "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,x-requested-with",
-            "Access-Control-Expose-Headers": "*,x-amzn-remapped-authorization"
+            "Access-Control-Allow-Origin": "*"//,
+            //"Access-Control-Allow-Methods": "*",
+            //"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,x-requested-with",
+            //"Access-Control-Expose-Headers": "*,x-amzn-remapped-authorization"
         },
         "body": "..."
     };
