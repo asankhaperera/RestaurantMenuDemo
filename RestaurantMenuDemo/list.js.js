@@ -1,5 +1,5 @@
 let AWS = require('aws-sdk');
-const ddb = new AWS.DynamoDB.DocumentClient();
+//const ddb = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = function (event, context, callback) {
 
@@ -10,9 +10,11 @@ exports.handler = function (event, context, callback) {
         },
         "body": "Hello x World"
     }
-    let itemType = (event.queryStringParameters && event.queryStringParameters.type) || "NON_VEG";
+    //let itemType = (event.queryStringParameters && event.queryStringParameters.type) || "NON_VEG";
 
-    ddb.scan({
+callback(null, response);
+
+/*    ddb.scan({
         TableName: 'MenuItems',
         ExpressionAttributeValues: {
             ':it': itemType
@@ -30,6 +32,6 @@ exports.handler = function (event, context, callback) {
         //handle error
         response.body = JSON.stringify(err);
         callback(null, response);
-    });
+    });*/
 
 }
